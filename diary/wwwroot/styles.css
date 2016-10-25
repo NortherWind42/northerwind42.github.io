@@ -1,0 +1,313 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+@import "../node_modules/angular-material/angular-material.css";
+@import "loading-animation.css";
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+a {
+  color: black;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active {
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width: 330px) {
+  .md-button {
+    min-width: 1%;
+  }
+}
+main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+calendar {
+  display: block;
+}
+calendar .calendar_month-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 0.188em;
+  font-size: 1.250em;
+  padding: 2em 1.563em;
+  width: 100%;
+  color: white;
+}
+calendar .calendar_month-down {
+  text-align: center;
+}
+calendar .calendar_month-down table {
+  width: 100%;
+  border-collapse: collapse;
+}
+calendar .calendar_month-down table td,
+calendar .calendar_month-down table th {
+  vertical-align: middle;
+}
+calendar .calendar_today {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+calendar .calendar_today:hover {
+  cursor: pointer;
+}
+calendar .calendar_days-title-container {
+  background-color: #DDDDDD;
+}
+calendar .calendar_day-of-week {
+  text-align: center;
+  padding: 0.620em;
+  color: #555555;
+}
+calendar .calendar_day {
+  text-align: center;
+}
+calendar .calendar_days-container {
+  background-color: #EEEEEE;
+}
+calendar .calendar_close-calendar-button {
+  display: none;
+  margin: 0;
+  width: 100%;
+}
+calendar .calendar_open-calendar-button {
+  display: none;
+  margin: 0;
+  width: 100%;
+}
+calendar .calendar_calendar-collapsable {
+  border-top: 1px solid white;
+}
+calendar .calendar_calendar-collapsable.expanded {
+  height: 28.500em;
+}
+@media screen and (max-width: 740px) {
+  .md-button {
+    min-width: 80%;
+  }
+  calendar .calendar_month-top {
+    padding: 0.938em 0.625em;
+  }
+  calendar .calendar_close-calendar-button {
+    display: inline;
+  }
+  calendar .calendar_open-calendar-button {
+    display: inline;
+  }
+  calendar .calendar_calendar-collapsable {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    -webkit-transition: height 1s;
+            transition: height 1s;
+  }
+}
+@media screen and (max-width: 330px) {
+  .md-button {
+    min-width: 1%;
+  }
+}
+@media screen and (min-width: 750px) {
+  calendar .calendar_calendar-collapsable.expanded {
+    height: 30em;
+  }
+}
+task-list {
+  display: block;
+}
+task-list table {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1.250em;
+  z-index: 1;
+}
+task-list .task-list_checkbox {
+  display: inherit;
+}
+task-list .task-list_note {
+  word-wrap: break-word;
+  width: 90%;
+  max-width: 90%;
+}
+task-list .task-list_task-completed {
+  text-decoration: line-through;
+}
+task-list .task-list_add-button {
+  display: block;
+  margin: auto;
+  margin-bottom: 1.875em;
+  width: 100px;
+}
+task-list .task-list_save-button {
+  display: block;
+  margin: auto;
+}
+task-list .task-list_edit-task-input {
+  margin-top: 2.188em;
+}
+task-list .task-list_swipe-area {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 740px) {
+  task-list .task-list_swipe-area {
+    display: block;
+  }
+}
